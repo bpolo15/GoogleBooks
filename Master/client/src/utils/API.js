@@ -1,3 +1,4 @@
+//importing axios from axios for the API calls
 import axios from "axios";
 
 export default {

@@ -1,14 +1,17 @@
+//Install all dependencies 
 const express = require("express");
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+//If in production we will use process.env.PORT, if we are in development we will use the localhost:3001
+
 const PORT = process.env.PORT || 3001;
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets
+// Serve up static assets, allows access to the front end
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
