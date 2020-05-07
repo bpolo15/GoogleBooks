@@ -1,3 +1,4 @@
+//requiring dependencies
 import React from "react";
 import "./style.css";
 
